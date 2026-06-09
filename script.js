@@ -136,19 +136,6 @@ function refreshPrices() {
     fetchCryptoPrices();
 }
 
-function handleFormSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const name = form.querySelector('#name').value;
-    const email = form.querySelector('#email').value;
-    const message = form.querySelector('#message').value;
-
-    if (name && email && message) {
-        alert(`Thank you ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
-        form.reset();
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     fetchCryptoPrices();
 
@@ -166,9 +153,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', handleFormSubmit);
-    }
 });
