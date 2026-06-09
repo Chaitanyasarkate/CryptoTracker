@@ -136,6 +136,19 @@ function refreshPrices() {
     fetchCryptoPrices();
 }
 
+function handleFormSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.querySelector('#name').value;
+    const email = form.querySelector('#email').value;
+    const message = form.querySelector('#message').value;
+
+    if (name && email && message) {
+        alert(`Thank you ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
+        form.reset();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     fetchCryptoPrices();
 
@@ -144,9 +157,18 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            if (href === '#') {
+            if (href && href !== '#') {
                 e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         });
     });
+
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleFormSubmit);
+    }
 });

@@ -22,7 +22,8 @@
         <a href="#" class="btn btn-secondary">EN</a>
     </nav>
 
-    <div class="hero-section">
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
         <div class="content">
             <h1 class="hero-title">Buy & <br><span class="gradient-text">Sell Crypto</span></h1>
             <p class="hero-description">Stay updated with real-time prices, market trends, and personalized insights for smarter investment decisions.</p>
@@ -35,23 +36,136 @@
                 <p>Loading live prices...</p>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Prices Section -->
     <section id="prices" class="prices-section">
         <h2>Live Cryptocurrency Prices</h2>
+        <p class="section-subtitle">Real-time market data updated every 30 seconds</p>
         <div class="prices-grid" id="prices-grid">
             <div class="loading-spinner">
                 <div class="spinner"></div>
                 <p>Loading prices...</p>
             </div>
         </div>
-        
+        <div id="error-message" class="error-message" style="display: none;"></div>
     </section>
 
-    <footer class="footer">
-       
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2>About CryptoTracker</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">🔍</div>
+                    <h3>Real-Time Tracking</h3>
+                    <p>Monitor cryptocurrency prices in real-time with data updated every 30 seconds. Stay informed about market movements instantly.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📊</div>
+                    <h3>Market Analytics</h3>
+                    <p>View comprehensive market data including 24-hour price changes, market capitalization, and trading volume for informed decisions.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🌐</div>
+                    <h3>Easy Access</h3>
+                    <p>Access cryptocurrency prices anytime, anywhere. Our responsive design works perfectly on desktop, tablet, and mobile devices.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">⚡</div>
+                    <h3>Fast & Reliable</h3>
+                    <p>Powered by CoinGecko API, we provide accurate, reliable data with 99.9% uptime for uninterrupted service.</p>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h3>Key Features</h3>
+                <ul class="features-list">
+                    <li>✓ Track 8 major cryptocurrencies</li>
+                    <li>✓ 24-hour price change indicators</li>
+                    <li>✓ Market cap and volume data</li>
+                    <li>✓ Automatic price updates</li>
+                    <li>✓ Mobile responsive design</li>
+                    <li>✓ Error handling and reliability</li>
+                </ul>
+            </div>
         </div>
-        <p class="footer-note">Live prices powered by CoinGecko API • Last updated: <span id="update-time">--:--</span></p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Have questions or feedback? We'd love to hear from you!</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:contact@cryptotracker.com">contact@cryptotracker.com</a></p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💬</div>
+                        <h4>Support</h4>
+                        <p>24/7 customer support available</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🔗</div>
+                        <h4>Social</h4>
+                        <p>Follow us on <a href="#">Twitter</a> | <a href="#">Discord</a></p>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>CryptoTracker</h4>
+                <p>Real-time cryptocurrency price tracking for informed investing.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#prices">Prices</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">API Documentation</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CryptoTracker. All rights reserved.</p>
+            <p class="footer-note">Live prices powered by CoinGecko API • Last updated: <span id="update-time">--:--</span></p>
+        </div>
     </footer>
 </div>
 
