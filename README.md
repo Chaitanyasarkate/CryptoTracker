@@ -2,6 +2,8 @@
 
 A modern, fully-functional cryptocurrency price tracker web application with live prices, market data, and beautiful UI.
 
+Project live on this link : https://crypto-tracker-7e4216.netlify.app/
+
 ## Features
 
 ✅ **Live Cryptocurrency Prices** - Real-time data from CoinGecko API  
@@ -174,4 +176,4 @@ For issues or questions:
 
 ---
 
-**Made with ❤️ for crypto enthusiasts**
+
