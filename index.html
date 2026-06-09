@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTracker - Real-time Cryptocurrency Prices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <nav>
+        <div class="nav-left">
+            <img src="images/logo.png" class="logo" alt="CryptoTracker Logo">
+            <span class="logo-text">CryptoTracker</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#prices" class="nav-link">Prices</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#" class="btn btn-secondary">EN</a>
+    </nav>
+
+    <div class="hero-section">
+        <div class="content">
+            <h1 class="hero-title">Buy & <br><span class="gradient-text">Sell Crypto</span></h1>
+            <p class="hero-description">Stay updated with real-time prices, market trends, and personalized insights for smarter investment decisions.</p>
+            <a href="#prices" class="btn btn-primary">View Prices</a>
+        </div>
+
+        <div class="coin-showcase" id="coin-showcase">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading live prices...</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="prices" class="prices-section">
+        <h2>Live Cryptocurrency Prices</h2>
+        <div class="prices-grid" id="prices-grid">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading prices...</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+       
+        </div>
+        <p class="footer-note">Live prices powered by CoinGecko API • Last updated: <span id="update-time">--:--</span></p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
