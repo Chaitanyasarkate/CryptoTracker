@@ -2,7 +2,7 @@
 
 A modern, fully-functional cryptocurrency price tracker web application with live prices, market data, and beautiful UI.
 
-Project live on this link:https://crypto-tracker-7e4216.netlify.app/
+Project live on this link : https://crypto-tracker-7e4216.netlify.app/
 
 ## Features
 
