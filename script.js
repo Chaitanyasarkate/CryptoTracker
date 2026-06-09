@@ -15,7 +15,12 @@ async function fetchCryptoPrices() {
             price_change_percentage: '24h'
         });
 
-        const response = await fetch(`${API_URL}?${params}`);
+        const response = await fetch(`${API_URL}?${params}`, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -23,18 +28,23 @@ async function fetchCryptoPrices() {
 
         const data = await response.json();
 
+        if (!Array.isArray(data) || data.length === 0) {
+            throw new Error('Invalid data received from API');
+        }
+
         data.forEach(coin => {
             allCoinsData[coin.id] = {
                 name: coin.name,
                 symbol: coin.symbol.toUpperCase(),
-                price: coin.current_price,
-                change24h: coin.price_change_percentage_24h,
+                price: coin.current_price || 0,
+                change24h: coin.price_change_percentage_24h || 0,
                 image: coin.image,
                 marketCap: coin.market_cap,
                 volume24h: coin.total_volume
             };
         });
 
+        console.log('Prices fetched successfully:', allCoinsData);
         updateShowcase();
         updatePricesGrid();
         updateTimestamp();
@@ -42,7 +52,7 @@ async function fetchCryptoPrices() {
 
     } catch (error) {
         console.error('Error fetching prices:', error);
-        showErrorMessage('Failed to load prices. Please try again later.');
+        showErrorMessage('Unable to load prices. Please check your internet connection and try again.');
     }
 }
 
