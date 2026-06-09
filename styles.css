@@ -612,6 +612,27 @@ nav {
     margin-top: 20px;
 }
 
+/* Footer */
+.footer {
+    position: relative;
+    z-index: 100;
+    padding: 30px 7%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+    color: var(--text);
+}
+
+.footer p {
+    margin-bottom: 8px;
+}
+
+.footer-note {
+    font-size: 12px !important;
+    color: rgba(224, 224, 224, 0.6);
+}
+
 /* Responsive Updates */
 @media (max-width: 768px) {
     .prices-section {
